@@ -14,7 +14,7 @@ def main(username):
 
 def currentSong(token, username):
     if token:
-        # Creates new spotify object with the given token to access user info--
+        # Creates new spotify object with the given token to access user info
         sp = spotipy.Spotify(auth=token)
         # Get username
         user = sp.current_user()
