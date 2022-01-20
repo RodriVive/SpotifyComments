@@ -1,5 +1,3 @@
-from __future__ import print_function
-from sys import platlibdir
 import spotipy
 import spotipy.util as util
 from dotenv import dotenv_values
