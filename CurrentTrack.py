@@ -6,7 +6,7 @@ from dotenv import dotenv_values
 
 
 def main(username):
-    env = dotenv_values('secrets.env')
+    env = dotenv_values('.env')
     scope = 'user-read-currently-playing user-read-recently-played'
     token = util.prompt_for_user_token(username, scope, client_id=env['client_id'], client_secret=env['client_secret'], redirect_uri='http://127.0.0.1:9090')
     currentSong(token, username)
@@ -30,6 +30,6 @@ def currentSong(token, username):
                 song = check
                 print(song['item']['name'], song['item']['uri'])
             
-env = dotenv_values('secrets.env')      
+env = dotenv_values('.env')      
 main(env['username'])
 
