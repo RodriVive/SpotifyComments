@@ -30,6 +30,6 @@ def currentSong(token, username):
                 song = check
                 print(song['item']['name'], song['item']['uri'])
             
-            
-main('rodrigo.villegas.')
+env = dotenv_values('secrets.env')      
+main(env['username'])
 
