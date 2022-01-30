@@ -4,7 +4,7 @@ import spotipy.util as util
 from dotenv import dotenv_values
 import tekore as tk
 from spotipy.oauth2 import SpotifyOAuth
-import json
+
 
 
 def main(username):
