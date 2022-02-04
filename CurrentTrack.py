@@ -4,6 +4,7 @@ import spotipy.util as util
 from dotenv import dotenv_values
 import tekore as tk
 from spotipy.oauth2 import SpotifyOAuth
+import json
 
 
 
@@ -54,6 +55,7 @@ def currentSong(token, username):
                     song = check
                     print(song['item']['name'], song['item']['uri'])
         except:
+            print("REFRESHING")
             tk.refresh_user_token(client_id=env['client_id'], client_secret=env['client_secret'], refresh_token=dict['refresh_token'])
         finally:
             currentSong(token, username)
